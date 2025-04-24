@@ -1,16 +1,13 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 
-namespace WebApplication1.Data
+namespace HotelListing_API.Models.Country
 {
-    public class Hotel
+    public class HotelDTO
     {
         public int Id { get; set; }
         public string Name { get; set; }
         public string Address { get; set; }
         public double Rating { get; set; }
-        [ForeignKey(nameof(CountryId))]
         public int CountryId { get; set; }
-        public Country? Country { get; set; }
-
     }
 }
